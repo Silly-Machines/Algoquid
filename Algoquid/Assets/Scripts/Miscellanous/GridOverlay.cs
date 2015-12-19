@@ -64,7 +64,8 @@ public class GridOverlay : MonoBehaviour {
 			                            "      Bind \"vertex\", vertex Bind \"color\", color }" +
 			                            "} } }" );
 			lineMaterial.hideFlags = HideFlags.HideAndDontSave;
-			lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;}
+			lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;
+		}
 	}
 	
 	void OnPostRender() 
