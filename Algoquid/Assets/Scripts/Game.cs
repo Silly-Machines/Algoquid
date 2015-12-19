@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using Newtonsoft.Json;
 
 public class Game : MonoBehaviour {
 	public GameObject grid;
@@ -9,6 +11,20 @@ public class Game : MonoBehaviour {
 	void Start () {
 		// Apply grid size
 		applyGridSize (Constants.GRID_SIZE_X, Constants.GRID_SIZE_Z, grid, gridOverlay, sceneCamera);
+
+		// Show persistent data path
+		var format = "Launched {0}.\n" + 
+			"Persistent data path: {1}";
+		var formattedText = String.Format (format, Constants.GAME_NAME, Application.persistentDataPath);
+		print (formattedText);
+	}
+
+	void OnLevelWasLoaded () {
+		// Deserialize JSON
+		var json = Global.LEVEL_JSON;
+		var level_meta = JsonConvert.DeserializeObject<Level> (json);
+		
+		// Apply level meta
 	}
 
 	void Update () {
