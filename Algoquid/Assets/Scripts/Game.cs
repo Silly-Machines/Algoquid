@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
+using System.IO;
 using System.Collections;
 using Newtonsoft.Json;
 
@@ -11,12 +12,6 @@ public class Game : MonoBehaviour {
 	void Start () {
 		// Apply grid size
 		applyGridSize (Constants.GRID_SIZE_X, Constants.GRID_SIZE_Z, grid, gridOverlay, sceneCamera);
-
-		// Show persistent data path
-		var format = "Launched {0}.\n" + 
-			"Persistent data path: {1}";
-		var formattedText = String.Format (format, Constants.GAME_NAME, Application.persistentDataPath);
-		print (formattedText);
 	}
 
 	void OnLevelWasLoaded () {
@@ -24,7 +19,7 @@ public class Game : MonoBehaviour {
 		var json = Global.LEVEL_JSON;
 		var level_meta = JsonConvert.DeserializeObject<Level> (json);
 		
-		// Apply level meta
+		// TODO: Apply level meta
 	}
 
 	void Update () {
@@ -54,7 +49,9 @@ public class Game : MonoBehaviour {
 		gridOverlay.smallStep = 0;
 		gridOverlay.largeStep = x;
 
-		// Apply camera parameters
-		//camera.orthographicSize = newPos_x;
+		// TODO: Apply camera parameters
+		// camera.orthographicSize = newPos_x;
 	}
+
+
 }

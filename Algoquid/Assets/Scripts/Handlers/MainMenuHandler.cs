@@ -10,19 +10,8 @@ public class MainMenuHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Loaders.GetLevels (out Global.LEVELS, out Global.LEVELS_SLUGS, out Global.LEVELS_PATHS);
-		string levelListText = "";
-		Debug.Log (Global.LEVELS_SLUGS [0]);
-		for (var i = 0; i < Global.LEVELS.Count; i++) {
-			var index = i + 1;
-			var slug = Global.LEVELS_SLUGS[i];
-			var format = "{0} - {1}\n";
-			var formattedText = string.Format (format, index, slug);
-			levelListText += formattedText;
-		}
-
-		levelList.text = levelListText;
-
+		firstLaunchActions ();
+		populateLevelsList ();
 		
 		// Show persistent data path
 		var format2 = "Launched {0}.\n" + // TODO: MEILEUR NOM
@@ -46,5 +35,36 @@ public class MainMenuHandler : MonoBehaviour {
 		catch(Exception e) {
 			Debug.LogError(e.Message);
 		}*/
+	}
+
+	/// <summary>
+	/// First launch actions.
+	/// </summary>
+	public void firstLaunchActions() {
+		var doNotInitializeFile = Application.persistentDataPath + "//" + Constants.DO_NOT_INITIALIZE_FILE_NAME;
+		
+		if(!File.Exists (doNotInitializeFile)) {
+			// Copy zip in temp path
+			var zipPath = Application.streamingAssetsPath + "//DefaultResources.zip";
+
+			// Unzip default resources
+			CompressionTools.unzip (zipPath, Application.persistentDataPath);
+
+			print ("Unzipped default resources.");
+		}
+	}
+
+	public void populateLevelsList() {
+		Loaders.GetLevels (out Global.LEVELS, out Global.LEVELS_SLUGS, out Global.LEVELS_PATHS);
+		string levelListText = "";
+		for (var i = 0; i < Global.LEVELS.Count; i++) {
+			var index = i + 1;
+			var slug = Global.LEVELS_SLUGS[i];
+			var format = "{0} - {1}\n";
+			var formattedText = string.Format (format, index, slug);
+			levelListText += formattedText;
+		}
+		
+		levelList.text = levelListText;
 	}
 }

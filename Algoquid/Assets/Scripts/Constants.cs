@@ -18,4 +18,10 @@
 	// HUD
 	//
 	public const string HUD_INFO_TEXT_NAME = "Information";
+
+	//
+	// Files
+	//
+	public const string DO_NOT_INITIALIZE_FILE_NAME = "doNotInitialize";
+	public const string DEFAULT_RESOURCES_PATH = "DefaultResources";
 }
