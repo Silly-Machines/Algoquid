@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 
 public class Level {
+
 	public string name { get; set; }
+	public string slug { get; set; }
 	public string author { get; set; }
 	public string difficulty { get; set; }
 	public List<Element> elements { get; set; }

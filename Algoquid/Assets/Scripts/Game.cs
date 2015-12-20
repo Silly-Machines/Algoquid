@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
+using System;
+using System.IO;
 using System.Collections;
+using Newtonsoft.Json;
 
 public class Game : MonoBehaviour {
 	public GameObject grid;
@@ -9,6 +12,14 @@ public class Game : MonoBehaviour {
 	void Start () {
 		// Apply grid size
 		applyGridSize (Constants.GRID_SIZE_X, Constants.GRID_SIZE_Z, grid, gridOverlay, sceneCamera);
+	}
+
+	void OnLevelWasLoaded () {
+		// Deserialize JSON
+		var json = Global.LEVEL_JSON;
+		var level_meta = JsonConvert.DeserializeObject<Level> (json);
+		
+		// TODO: Apply level meta
 	}
 
 	void Update () {
@@ -38,7 +49,9 @@ public class Game : MonoBehaviour {
 		gridOverlay.smallStep = 0;
 		gridOverlay.largeStep = x;
 
-		// Apply camera parameters
-		//camera.orthographicSize = newPos_x;
+		// TODO: Apply camera parameters
+		// camera.orthographicSize = newPos_x;
 	}
+
+
 }
