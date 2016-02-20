@@ -47,17 +47,23 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Classes\Level.cs" />
+     <Compile Include="Assets\Scripts\Classes\LevelElement.cs" />
      <Compile Include="Assets\Scripts\Classes\Pack.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\Elements\Rock.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\Game\Quid\Quid.cs" />
      <Compile Include="Assets\Scripts\Global.cs" />
      <Compile Include="Assets\Scripts\Handlers\HUDHandler.cs" />
+     <Compile Include="Assets\Scripts\Handlers\LoadLevelButton.cs" />
      <Compile Include="Assets\Scripts\Handlers\Loaders.cs" />
      <Compile Include="Assets\Scripts\Handlers\MainMenuHandler.cs" />
+     <Compile Include="Assets\Scripts\Handlers\StartMenuHandler.cs" />
      <Compile Include="Assets\Scripts\Interfaces\ILevelElement.cs" />
      <Compile Include="Assets\Scripts\Miscellanous\CompressionTools.cs" />
+     <Compile Include="Assets\Scripts\Miscellanous\Fade.cs" />
      <Compile Include="Assets\Scripts\Miscellanous\GridOverlay.cs" />
+     <Compile Include="Assets\Scripts\Miscellanous\RandomStringGenerator.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -67,11 +73,11 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>D:/GitHub/Algoquid/Algoquid/Assets/Newtonsoft.Json.dll</HintPath>
- </Reference>
  <Reference Include="Ionic.Zip.Reduced">
  <HintPath>D:/GitHub/Algoquid/Algoquid/Assets/Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/GitHub/Algoquid/Algoquid/Assets/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

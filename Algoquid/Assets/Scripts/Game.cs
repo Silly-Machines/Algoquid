@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.IO;
 using System.Collections;
+using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Reflection;
+using System.Linq;
 
 public class Game : MonoBehaviour {
 	public GameObject grid;
@@ -15,15 +19,35 @@ public class Game : MonoBehaviour {
 	}
 
 	void OnLevelWasLoaded () {
-		// Deserialize JSON
-		var json = Global.LEVEL_JSON;
-		var level_meta = JsonConvert.DeserializeObject<Level> (json);
-		
-		// TODO: Apply level meta
+		var level_meta = Global.LOADED_LEVEL;
+
+		//
+		// Apply level meta
+		//
+
+		// Load level elements
+		Global.LEVEL_ELEMENTS = new Dictionary<string, GameObject> ();
+		for(var i = 0; i < Constants.LEVEL_ELEMENTS.Length / 2; i++)
+			Global.LEVEL_ELEMENTS.Add (
+				Constants.LEVEL_ELEMENTS [i, 0],
+				GameObject.Find (Constants.LEVEL_ELEMENTS [i, 1])
+				);
+
+		// Show level text
+		var format = "{0}\n" +
+			"par {1}\n" +
+			"Difficulté : {2}";
+		var formattedText = String.Format (format, level_meta.name, level_meta.author, level_meta.difficulty);
+		var levelInfoText = GameObject.Find (Constants.HUD_LEVEL_INFO_TEXT_NAME);
+		levelInfoText.GetComponent<Text> ().text = formattedText;
+
+		// Add level elements
+		foreach (var element in level_meta.elements)
+			Loaders.ElementToGameObject (element);
 	}
 
 	void Update () {
-		
+
 	}
 
 	/// <summary>

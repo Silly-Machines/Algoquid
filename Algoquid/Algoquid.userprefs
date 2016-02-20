@@ -1,19 +1,17 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Miscellanous\Paths.cs">
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Handlers\MainMenuHandler.cs">
     <Files>
-      <File FileName="Assets\Scripts\Miscellanous\CompressionTools.cs" Line="11" Column="53" />
-      <File FileName="Assets\Scripts\Global.cs" Line="32" Column="1" />
-      <File FileName="Assets\Scripts\Constants.cs" Line="21" Column="2" />
-      <File FileName="Assets\Scripts\Miscellanous\GridOverlay.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game.cs" Line="56" Column="2" />
-      <File FileName="Assets\Scripts\Interfaces\ILevelElement.cs" Line="12" Column="17" />
+      <File FileName="Assets\Scripts\Miscellanous\Fade.cs" Line="18" Column="37" />
+      <File FileName="Assets\Scripts\Miscellanous\CompressionTools.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Classes\LevelElement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Handlers\Loaders.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Handlers\MainMenuHandler.cs" Line="54" Column="4" />
+      <File FileName="Assets\Scripts\Handlers\StartMenuHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Constants.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Global.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Classes\Pack.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Classes\Level.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\Quid\Quid.cs" Line="12" Column="18" />
-      <File FileName="Assets\Scripts\Miscellanous\Paths.cs" Line="26" Column="3" />
+      <File FileName="Assets\Scripts\Handlers\MainMenuHandler.cs" Line="73" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -18,10 +18,26 @@
 	// HUD
 	//
 	public const string HUD_INFO_TEXT_NAME = "Information";
+	public const string HUD_LEVEL_INFO_TEXT_NAME = "LevelInfo";
 
 	//
 	// Files
 	//
 	public const string DO_NOT_INITIALIZE_FILE_NAME = "doNotInitialize";
 	public const string DEFAULT_RESOURCES_PATH = "DefaultResources";
+
+	//
+	// Elements
+	//
+	public static readonly string[,] LEVEL_ELEMENTS = new string[,] {
+		{ "Rock", "Model: Rock" }
+	};
+	public const string PLACED_ELEMENTS_OBJ_NAME = "Placed";
+
+	//
+	// Levels
+	//
+	public const int LEVEL_GAME = 1;
+	public const int LEVEL_START_MENU = 0;
+	public const int LEVEL_CHOOSE_LEVEL = 2;
 }
