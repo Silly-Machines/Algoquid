@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 public class Pack
 {
-	public Dictionary<int, Level> levels;
-
-	public Pack() {
-		levels = new Dictionary<int, Level> ();
-	}
+	public string name { get; set; }
+	public string path { get; set; }
+	public string author { get; set; }
+	public string description { get; set; }
+	public string difficulty { get; set; }
 }
 

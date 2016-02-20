@@ -8,16 +8,17 @@ public class Global : MonoBehaviour {
 	public static List<Level> LEVELS;
 	public static string[] LEVELS_SLUGS;
 	public static string[] LEVELS_PATHS;
+	public static List<Pack> PACKS = new List<Pack>();
 
 	//
 	// Elements
 	//
-	public static Dictionary<string, dynamic> LEVEL_ELEMENTS;
+	public static Dictionary<string, GameObject> LEVEL_ELEMENTS;
 
 	//
 	// Game
 	//
-	public static string LEVEL_JSON;
+	public static Level LOADED_LEVEL;
 
 	// Use this for initialization
 	void Start () {
