@@ -6,3 +6,12 @@
 
 
 **Algoquid** est un petit jeu vidéo rendant l'algorithmique accessible à tous et initiant à la programmation informatique. Vous commandez à distance **Quid**, un petit robot envoyé sur une planète lointaine. Petit à petit, par l'utilisation d'un éditeur de programmation par blocs, vous évoluerez dans cette planète par l'accomplissement successif de petites missions, jusqu'à utiliser un vrai langage de programmation.
+
+
+
+
+#### Dépendances :
+- [Newtonsoft.Json.dll (Net20)](https://github.com/JamesNK/Newtonsoft.Json)
+- [Ionic.Zip.Reduced.dll](https://dotnetzip.codeplex.com/)
+
+Ces dépendances sont à rajouter dans le répertoire `Algoquid\Assets\`.
