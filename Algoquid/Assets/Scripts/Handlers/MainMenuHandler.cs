@@ -59,7 +59,8 @@ public class MainMenuHandler : MonoBehaviour {
 		
 		var packsNumberText = GameObject.Find ("PacksNumber").GetComponent<Text> ();
 		packsNumberText.text = "1/" + Global.PACKS.Count;
-		loadPackInfo (Global.PACKS [0]);
+		if (Global.PACKS.Count != 0)
+			loadPackInfo(Global.PACKS [0]);
 		
 		var scrollbar = GameObject.Find ("Scrollbar").GetComponent<Scrollbar> ();
 		scrollbar.value = 0f;
