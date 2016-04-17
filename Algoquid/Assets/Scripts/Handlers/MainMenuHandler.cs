@@ -13,7 +13,7 @@ public class MainMenuHandler : MonoBehaviour {
 		
 		// Show persistent data path
 		var format = "Launched {0}.\n" +
-			"Persistent data path: {1}";
+			"Persistent data path: <color=maroon>{1}</color>";
 		var formattedText = String.Format (format, Constants.GAME_NAME, Application.persistentDataPath);
 		Debug.Log (formattedText);
 		
