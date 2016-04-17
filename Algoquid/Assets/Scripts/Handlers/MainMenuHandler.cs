@@ -89,8 +89,7 @@ public class MainMenuHandler : MonoBehaviour {
 			button.name = "LoadLevel:" + level.name;
 
 			if(i % 2 == 0) {
-				var color = new Color();
-				Color.TryParseHexString("E2E2E2FF", out color);
+				var color = new Color(0.89F, 0.89F, 0.89F, 1);
 				button.GetComponent<Image>().color = color;
 			}
 			var newPos = new Vector3(-5.0f, lastPosY, 0.0f);
