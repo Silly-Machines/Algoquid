@@ -1,7 +1,7 @@
 # Algoquid
 #### L'algorithmique accessible à tous
 
-[![Unity](https://img.shields.io/badge/Unity3D-5.3.4f1-yellow.svg)](https://unity3d.com/get-unity)
+[![Unity](https://img.shields.io/badge/Unity3D-5.3.5f1-yellow.svg)](https://unity3d.com/get-unity)
 [![Join the chat at https://gitter.im/Silly-Machines/Algoquid](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Silly-Machines/Algoquid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Join the project at Trello](https://img.shields.io/badge/Trello-view%20task-D29034.svg)](https://trello.com/b/VF72jZdk/algoquid)
 [![Licence MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
